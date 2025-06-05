@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../public/css/admin.css">
+    <title>ZIHUU KEYAUTH</title>
+    <link rel="stylesheet" href="../public/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
 </head>
@@ -28,7 +28,7 @@
                     </button>
                     <a href="https://nexxlokesh.pro" class="flex ms-2 md:me-24">
                         <span
-                            class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">redefine</span>
+                            class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">ZIHUU KEYAUTH</span>
                     </a>
                 </div>
                 <div class="flex items-center">
@@ -43,23 +43,34 @@
                                     alt="user photo">
                             </button>
                         </div>
-                        
                         <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-sm shadow-sm dark:bg-gray-700 dark:divide-gray-600"
                             id="dropdown-user">
                             <div class="px-4 py-3" role="none">
                                 <p class="text-sm text-gray-900 dark:text-white" role="none">
-                                    zihuuhere z
+                                    Neil Sims
                                 </p>
                                 <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
-                                   client_id: user_zihuuhere_z_1749115681676
-                                </p>
-                                <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
-                                   password: 8f775ed37babc9d4
+                                    neil.sims@flowbite.com
                                 </p>
                             </div>
                             <ul class="py-1" role="none">
                                 <li>
-                                    <a href="/auth/logout"
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                        role="menuitem">Dashboard</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                        role="menuitem">Settings</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                        role="menuitem">Earnings</a>
+                                </li>
+                                <li>
+                                    <a href="#"
                                         class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                                         role="menuitem">Sign out</a>
                                 </li>
@@ -96,7 +107,7 @@
                     </a>
                 </li>
                 <li onclick="showSection('settings')">
-                    <a href="#settings"
+                    <a href="#"
                         class="flex items-center justify-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <i
                             class="ri-settings-6-line text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white text-3xl"></i>
@@ -109,9 +120,8 @@
 
     <!-- keygen -->
     <div class="overlay fixed w-full h-screen z-50" style="background: #00000034; display: none;" onclick="hideform()">
-        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-            onclick="event.stopPropagation()">
-            <form action="/admin/generate-key" method="POST"
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" onclick="event.stopPropagation()">
+            <form action="/generate-key" method="POST"
                 class="bg-white text-gray-800 p-8 rounded-lg shadow-md w-full max-w-md border border-gray-300">
                 <h2 class="text-xl font-bold mb-6 text-center">Create A New Key</h2>
 
@@ -127,23 +137,23 @@
                 <!-- Checkboxes -->
                 <div class="flex items-center justify-between mb-4">
                     <label class="flex items-center space-x-2">
-                        <input id="default-checkbox" name="lowercase" type="checkbox" value="on"
+                        <input id="default-checkbox" type="checkbox" value=""
                             class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                        <span>Lowercase</span>
+                        <span>Lowercase Letters</span>
                     </label>
                     <label class="flex items-center space-x-2">
-                        <input id="default-checkbox" name="uppercase" type="checkbox" value="on"
+                        <input id="default-checkbox" type="checkbox" value=""
                             class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                        <span>Uppercase</span>
+                        <span>Uppercase Letters</span>
                     </label>
                 </div>
 
                 <!-- Dropdown -->
                 <select name="type"
                     class="w-full mb-4 px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <option value="1">1 (default)</option>
-                    <option value="2">2 (Premium)</option>
-                    <option value="3">3 (Extreme)</option>
+                    <option>1 (default)</option>
+                    <option>2</option>
+                    <option>3</option>
                 </select>
 
                 <!-- License Note -->
@@ -165,8 +175,8 @@
                     required>
 
                 <!-- Generate Button -->
-                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded"
-                    style="cursor: pointer;">
+                <button type="submit"
+                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded">
                     Generate Keys
                 </button>
             </form>
@@ -197,7 +207,29 @@
                         </tr>
                     </thead>
                     <tbody>
-                        
+                        <% users.forEach(user=> { %>
+                            <tr
+                                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                <th scope="row"
+                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <%= user.hwid %>
+                                </th>
+                                <td class="px-6 py-4">
+                                    <%= user.username %>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <%= moment(user.expiry).format('DD/MM/YYYY') %>
+                                    
+                                </td>
+                                <td class="px-6 py-4">
+                                    <form action="/delete-user/<%= user._id %>" method="POST">
+                                        <button type="submit"
+                                            class="font-medium text-red-600 dark:text-red-500 hover:underline"
+                                            style="cursor: pointer;">Remove</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <% }) %>
                     </tbody>
 
                 </table>
@@ -227,144 +259,37 @@
                         </tr>
                     </thead>
                     <tbody>
-                        
+                        <% keys.forEach(key=> { %>
+                            <tr
+                                class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200">
+                                <th scope="row"
+                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <%= key.key %>
+                                </th>
+                                <td class="px-6 py-4">
+                                    <%= key.used %>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <%= key.note || '—' %>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <%= moment(key.expiry).format('DD/MM/YYYY hh:mm A') %>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <form action="/delete-key/<%= key._id %>" method="POST"
+                                        onsubmit="return confirm('Are you sure?')">
+                                        <button type="submit"
+                                            class="font-medium text-red-600 dark:text-red-500 hover:underline"
+                                            style="cursor: pointer;">Remove</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <% }) %>
 
 
                     </tbody>
                 </table>
             </div>
-
-
-            <div class="relative overflow-x-auto content-section" id="settings" style="display: none;">
-
-                <h3 class="mb-4 font-semibold text-gray-900 dark:text-white">Application Settings</h3>
-                <form action="/admin/update-settings" method="post"
-                    class="flex flex-wrap items-center gap-4 bg-white p-4 rounded-lg shadow-md w-full">
-
-                    <!-- HWID Lock -->
-                    <div
-                        class="flex items-center min-w-[300px] max-h-[10px] flex-1 ps-3 border border-gray-200 rounded-lg dark:border-gray-600">
-                        <input id="hwid-checkbox" name="hwidLock" type="checkbox" value="true"
-                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                        <label for="hwid-checkbox"
-                            class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">HWID
-                            Lock</label>
-                    </div>
-
-                    <!-- Pause App -->
-                    <div
-                        class="flex items-center min-w-[300px] flex-1 ps-3 border border-gray-200 rounded-lg dark:border-gray-600">
-                        <input id="pause-checkbox" name="pauseApp" type="checkbox" value="true"
-                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                        <label for="pause-checkbox"
-                            class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Pause
-                            App</label>
-                    </div>
-
-                    <!-- Dummy Input -->
-                    <input type="text" name="version" placeholder="e.g. 1.0.0"
-                        class="min-w-[300px] flex-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
-
-                    <!-- Submit Button -->
-                    <button type="submit"
-                        class="min-w-[300px] flex-1 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-                        Update
-                    </button>
-
-                </form>
-                <h3 class="mt-10 mb-5 font-semibold text-gray-900 dark:text-white">Alert Messages</h3>
-                <form method="POST" action="/admin/update-alerts"
-                    class="flex flex-wrap items-center gap-4 bg-white p-4 rounded-lg shadow-md w-full">
-
-                    <!-- App Pause Message -->
-                    <div class="w-full">
-                        <label for="app_pause" class="block mb-2 text-sm font-medium text-gray-900">Pause App
-                            Message</label>
-                        <input type="text" id="app_pause" name="app_pause" placeholder="Pause message"
-                            class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5" />
-                    </div>
-
-                    <!-- Outdated Version Message -->
-                    <div class="w-full">
-                        <label for="outdated_version" class="block mb-2 text-sm font-medium text-gray-900">Outdated
-                            Version Message</label>
-                        <input type="text" id="outdated_version" name="outdated_version"
-                            placeholder="Outdated version message"
-                            class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5" />
-                    </div>
-
-                    <!-- Key Already Used Message -->
-                    <div class="w-full">
-                        <label for="key_used" class="block mb-2 text-sm font-medium text-gray-900">Key Already
-                            Used</label>
-                        <input type="text" id="key_used" name="key_used" placeholder="Key used message"
-                            class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5" />
-                    </div>
-
-                    <!-- Subscription Expired -->
-                    <div class="w-full">
-                        <label for="subscription_expired"
-                            class="block mb-2 text-sm font-medium text-gray-900">Subscription Expired</label>
-                        <input type="text" id="subscription_expired" name="subscription_expired"
-                            placeholder="Subscription expired message"
-                            class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5" />
-                    </div>
-
-                    <!-- Subscription Mismatch -->
-                    <div class="w-full">
-                        <label for="sub_mismatch" class="block mb-2 text-sm font-medium text-gray-900">Subscription
-                            Mismatch</label>
-                        <input type="text" id="sub_mismatch" name="sub_mismatch"
-                            placeholder="Subscription mismatch message"
-                            class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5" />
-                    </div>
-
-                    <!-- Username Mismatch -->
-                    <div class="w-full">
-                        <label for="username_mismatch" class="block mb-2 text-sm font-medium text-gray-900">Username
-                            Mismatch</label>
-                        <input type="text" id="username_mismatch" name="username_mismatch"
-                            placeholder="Invalid username message"
-                            class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5" />
-                    </div>
-
-                    <!-- Username Already Exists -->
-                    <div class="w-full">
-                        <label for="exsit_username" class="block mb-2 text-sm font-medium text-gray-900">Username
-                            Already Exists</label>
-                        <input type="text" id="exsit_username" name="exsit_username"
-                            placeholder="Username already exists message"
-                            class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5" />
-                    </div>
-
-                    <!-- Password Mismatch -->
-                    <div class="w-full">
-                        <label for="password_mismatch" class="block mb-2 text-sm font-medium text-gray-900">Password
-                            Mismatch</label>
-                        <input type="text" id="password_mismatch" name="password_mismatch"
-                            placeholder="Password mismatch message"
-                            class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5" />
-                    </div>
-
-                    <!-- HWID Mismatch -->
-                    <div class="w-full">
-                        <label for="hwid_mismatch" class="block mb-2 text-sm font-medium text-gray-900">HWID
-                            Mismatch</label>
-                        <input type="text" id="hwid_mismatch" name="hwid_mismatch" placeholder="HWID mismatch message"
-                            class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5" />
-                    </div>
-
-                    <!-- Submit Button -->
-                    <button type="submit"
-                        class="w-full bg-blue-600 text-white font-semibold py-2.5 rounded-lg hover:bg-blue-700">
-                        Update
-                    </button>
-                </form>
-
-
-
-            </div>
-
 
         </div>
     </div>
